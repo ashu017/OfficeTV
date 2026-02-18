@@ -47,13 +47,13 @@ function App() {
           alt="Running away"
           className="running-image"
         />
-        <div className="speech-bubble runner-bubble">Please save me!</div>
+        <div className="speech-bubble runner-bubble">Ho kaun aap?!</div>
         <img
           src="/images/image2.png"
           alt="Chasing"
           className="chasing-image"
         />
-        <div className="speech-bubble chaser-bubble">Any updates?</div>
+        <div className="speech-bubble chaser-bubble">Mujhe v US citizenship dila de?</div>
       </div>
       <h1>🎂 Happy Birthday! 🌿</h1>
       <p className="subtitle">Aaj mera janam din hai, mujhe mubaarak baad dijiye!</p>
