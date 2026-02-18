@@ -16,6 +16,13 @@ function App() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.reload()
+    }, 60000)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className="app">
       <Confetti width={windowSize.width} height={windowSize.height} />
