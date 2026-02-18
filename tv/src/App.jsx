@@ -40,13 +40,13 @@ function App() {
       </div>
       <div className="floating-words">
         <span>such PARTY!</span>
-        <span>such YOLO</span>
+        <span>much YOLO</span>
         <span>such LIT 🔥</span>
-        <span>such LEGEND</span>
+        <span>much LEGEND</span>
         <span>such VIBES</span>
-        <span>such SLAY</span>
+        <span>much SLAY</span>
         <span>such EPIC</span>
-        <span>such BOSS</span>
+        <span>much BOSS</span>
       </div>
       <div className="chase-container">
         <img
