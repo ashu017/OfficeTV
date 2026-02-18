@@ -7,10 +7,6 @@ function App() {
     width: window.innerWidth,
     height: window.innerHeight,
   })
-  const [currentImage, setCurrentImage] = useState(() => {
-    const saved = localStorage.getItem('currentImage')
-    return saved || '/images/image.png'
-  })
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,15 +15,6 @@ function App() {
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const nextImage = currentImage === '/images/image.png' ? '/images/image2.png' : '/images/image.png'
-      localStorage.setItem('currentImage', nextImage)
-      window.location.reload()
-    }, 10000)
-    return () => clearTimeout(timer)
-  }, [currentImage])
 
   return (
     <div className="app">
@@ -44,15 +31,32 @@ function App() {
         <span>🎊</span>
         <span>🚬</span>
       </div>
-      <div className="celebration-container">
-        <img
-          src={currentImage}
-          alt="Celebration"
-          className="celebration-image"
-        />
-        <h1>🎂 Happy Birthday! 🌿</h1>
-        <p className="subtitle">Aaj mera janam din hai, mujhe mubaarak baad dijiye!</p>
+      <div className="floating-words">
+        <span>such PARTY!</span>
+        <span>such YOLO</span>
+        <span>such LIT 🔥</span>
+        <span>such LEGEND</span>
+        <span>such VIBES</span>
+        <span>such SLAY</span>
+        <span>such EPIC</span>
+        <span>such BOSS</span>
       </div>
+      <div className="chase-container">
+        <img
+          src="/images/image.png"
+          alt="Running away"
+          className="running-image"
+        />
+        <div className="speech-bubble runner-bubble">Please save me!</div>
+        <img
+          src="/images/image2.png"
+          alt="Chasing"
+          className="chasing-image"
+        />
+        <div className="speech-bubble chaser-bubble">Any updates?</div>
+      </div>
+      <h1>🎂 Happy Birthday! 🌿</h1>
+      <p className="subtitle">Aaj mera janam din hai, mujhe mubaarak baad dijiye!</p>
     </div>
   );
 }
